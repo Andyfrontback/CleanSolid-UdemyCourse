@@ -12,9 +12,9 @@
     red: ["manzana", "fresa"],
     yellow: ["piña", "banana"],
     purple: ["moras", "uva"],
-  };
+  } as const;
   type availableFruitColors = "red" | "yellow" | "purple";
-  function getFruitsByColor(color: availableFruitColors): string[] {
+  function getFruitsByColor(color: availableFruitColors): readonly string[] {
     if (!Object.keys(fruitsByColor).includes(color))
       throw Error("the color must be: red, yellow, purple");
 
